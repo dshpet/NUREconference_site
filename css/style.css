@@ -749,8 +749,14 @@ div#services {
   top: 0;
   left: 0;
 }
+
+.img-wrapper {
+    height: 415px;
+    line-height: 415px;
+    vertical-align: middle;
+}
 .view img {
-   display: block;
+   display: inline-block;
    position: relative;
    width: 100%;
 }
