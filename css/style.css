@@ -117,12 +117,12 @@ span {
     border-color: transparent;
 }
 .navbar-right {
-    width: 90%;
+    width: 72%;
 }
 
 .navbar-nav > li {
     float: left;
-    width: 14.28%;
+    width: 14%;
     text-align: center;
 }
 .navbar-inverse .navbar-nav > li > a {
@@ -539,7 +539,7 @@ h1.abbr {
 }
 
 .carousel {
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .themes-list {
