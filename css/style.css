@@ -7,16 +7,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 /*-- Fonts --*/
 @font-face {
-    font-family: 'FjallaOne-Regular';
-    src: url(../fonts/FjallaOne-Regular.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Montserrat-Regular';
-    src: url(../fonts/Montserrat-Regular.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'OpenSans-Regular';
-    src: url(../fonts/OpenSans-Regular.ttf) format('truetype');
+    font-family: 'Anonymous-Pro';
+    src: url(../fonts/Anonymous-Pro/Anonymous_Pro.ttf) format('truetype');
 }
 /*-- //Fonts --*/
 
@@ -52,14 +44,14 @@ input[type="button"],input[type="submit"] {
 h1,h2,h3,h4,h5,h6 {
     margin: 0;
     text-align: center;
-    font-family: 'Montserrat-Regular';
+    font-family: 'Anonymous-Pro';
     font-size: 35px;
     padding: 50px 0;
 }
 p {
     margin: 0;    
     font-size: 15px;
-    font-family: 'OpenSans-Regular';
+    font-family: 'Anonymous-Pro';
 }
 ul {
     margin: 0;
@@ -72,7 +64,7 @@ img {
     width: 100%;
 }
 span {
-    font-family: 'OpenSans-Regular';
+    font-family: 'Anonymous-Pro';
 }
 
 /*-- //Reset Code --*/
@@ -107,7 +99,7 @@ span {
 }
 .navbar-brand {
     font-size: 45px;
-    font-family: 'FjallaOne-Regular';
+    font-family: 'Anonymous-Pro';
     line-height: 23px;
     letter-spacing: 1px;
 }
@@ -129,7 +121,7 @@ span {
     color: #EEE;
 }
 .navbar-nav > li > a {
-    font-family: 'Montserrat-Regular';
+    font-family: 'Anonymous-Pro';
     font-size: 16px;
 }
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
@@ -170,7 +162,7 @@ ul.dropdown-menu.dropdown-menu2 {
     padding: 10px 20px;
     background-color: #333;
     color: #EEE;
-    font-family: 'Montserrat-Regular';
+    font-family: 'Anonymous-Pro';
 }
 .dropdown-menu > li > a:hover {
     color: #009688;
@@ -259,7 +251,7 @@ i.arrow {
 #loginpop a span {
     display: block;
     font-size: 16px;
-    font-family: 'Montserrat-Regular';
+    font-family: 'Anonymous-Pro';
     padding: 14px 0;
     color: #EEE;
     background-color: transparent;
@@ -305,7 +297,7 @@ i.arrow {
     background: #fff;
     border: none;
     padding-bottom: 1.5em;
-    font-family: 'OpenSans-Regular';
+    font-family: 'Anonymous-Pro';
 }
 #loginForm fieldset {
     margin: 0 0 15px 0;
@@ -418,7 +410,7 @@ fieldset#body {
     background: #fff;
     border: none;
     padding-bottom: 1.5em;
-    font-family: 'OpenSans-Regular';
+    font-family: 'Anonymous-Pro';
 }
 #signupForm fieldset {
     margin: 0 0 15px 0;
@@ -512,7 +504,7 @@ a.signup {
 
 h1.abbr {
     padding: 50px 0;
-    font-family: 'FjallaOne-Regular';
+    font-family: 'Anonymous-Pro';
     font-size: 40px;
     border-bottom: 1px solid #EEE;
     font-weight: normal;
@@ -854,7 +846,7 @@ div#events {
     padding: 10px;
     text-align: left;
     font-size: 15px;
-    font-family: 'OpenSans-Regular';
+    font-family: 'Anonymous-Pro';
 }
 .events span {
     color: #009688;
@@ -873,7 +865,7 @@ div#news {
 div#contact {
     padding-bottom: 50px;
     border-bottom: 1px solid #EEE;
-    font-family: 'OpenSans-Regular';
+    font-family: 'Anonymous-Pro';
 }
 .contact_form input[type='text'] {
     width: 100%;
@@ -944,7 +936,7 @@ form.contact_form {
 /*-- Footer-Starts-Here --*/
 .footer {
     background-color: #142127;
-    font-family: 'OpenSans-Regular';
+    font-family: 'Anonymous-Pro';
 }
 .footer-info {
     padding-top: 10px;
