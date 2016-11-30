@@ -836,6 +836,10 @@ div#news {
     border-bottom: 1px solid #EEE;
     text-align: center;
 }
+
+.n1 {
+    height: 210px;
+}
 /*-- //News-Ends-Here --*/
 
 /*-- Contact-Starts-Here --*/
