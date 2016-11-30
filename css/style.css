@@ -760,37 +760,6 @@ div#services {
    position: relative;
    width: 100%;
 }
-.view-seventh .mask {
-    background-color: rgba(0, 0, 0, 0.54);
-   -webkit-transform: rotate(0deg) scale(1);
-   -moz-transform: rotate(0deg) scale(1);
-   -o-transform: rotate(0deg) scale(1);
-   -ms-transform: rotate(0deg) scale(1);
-   transform: rotate(0deg) scale(1);
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
-   -webkit-transition: all 0.1s ease-out;
-   -moz-transition: all 0.1s ease-out;
-   -o-transition: all 0.1s ease-out;
-   -ms-transition: all 0.1s ease-out;
-   transition: all 0.1s ease-out;
-}
-.view-seventh:hover .mask {
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
-   filter: alpha(opacity=100);
-   opacity: 1;
-   -webkit-transform: translateY(0px) rotate(0deg);
-   -moz-transform: translateY(0px) rotate(0deg);
-   -o-transform: translateY(0px) rotate(0deg);
-   -ms-transform: translateY(0px) rotate(0deg);
-   transform: translateY(0px) rotate(0deg);
-   -webkit-transition-delay: 0.1s;
-   -moz-transition-delay: 0.1s;
-   -o-transition-delay: 0.1s;
-   -ms-transition-delay: 0.4s;
-   transition-delay: 0.1s;
-}
 ul.social {
   margin: 9em 0 0 0;
   padding: 0;
