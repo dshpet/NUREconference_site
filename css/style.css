@@ -537,6 +537,16 @@ h1.abbr {
 #about-p p {
     padding: 40px 0;
 }
+
+.carousel {
+    padding-top: 100px;
+}
+
+.themes-list {
+    padding-bottom: 50px;
+    font-size: 16px;
+    padding-left: 45px;
+}
 /*-- //About-Ends-Here --*/
 
 /*-- Foreword-Starts-Here --*/
