@@ -539,6 +539,10 @@ h1.abbr {
     font-size: 16px;
     padding-left: 45px;
 }
+
+.themes-list > li {
+    text-align: justify;
+}
 /*-- //About-Ends-Here --*/
 
 /*-- Foreword-Starts-Here --*/
@@ -571,6 +575,11 @@ h1.abbr {
     padding: 0 0 45px 0;
     text-align: left;
 }
+
+.pdf {
+    padding-top: 40px;
+}
+
 .pdf a {
     padding: 10px 20px;
     background-color: #F5F5F5;
