@@ -756,11 +756,17 @@ div#services {
     line-height: 415px;
     vertical-align: middle;
 }
+
 .carousel-img-wrapper {
     height: 500px;
-    line-height: 500px;
-    vertical-align: middle;
 }
+
+.carousel-img-wrapper > img {
+    object-fit: cover;
+    height: 100% !important;
+
+}
+
 .view img {
    display: inline-block;
    position: relative;
