@@ -854,6 +854,11 @@ div#contact {
     border-bottom: 1px solid #EEE;
     font-family: 'CharisSILR';
 }
+
+.contact-form-wrapper {
+    padding-top: 50px;
+}
+
 .contact_form input[type='text'] {
     width: 100%;
     border-radius: 0;
@@ -870,6 +875,7 @@ div#contact {
     margin: 0 0 20px;
     background: none;
 }
+
 .contact_form textarea {
     width: 100%;
     border-radius: 0;
@@ -914,6 +920,7 @@ form.contact_form {
 
 /*-- Map-Starts-Here --*/
 .map iframe {
+    padding-top: 50px;
     width: 100%;
     height: 500px;
     border: 5px solid #FAFAFA;
