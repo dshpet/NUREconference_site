@@ -48,8 +48,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	$(document).ready(function() {
 		var db = new DropboxWrapper();
 	  db.forEachMaterialFile(function(file) {
-	  	// $TODO UI
-		  //$('#materials').append('<a href="' + file.staticLink + '">' + file.name + "</a>");
+      var div = $('<div class="pdf">');
+      var a   = $('<a href="'      +
+      	           file.staticLink +
+      	           '"><sup>['      +
+      	           file.extension  +
+      	           ']</sup>'       +
+      	           file.name.substr(0, file.name.length - file.extension.length - 1) +
+      	           '</a>'
+      	         );
+
+      div.append(a);
+      $('#materials').append(div);
 	  });
 	});
 </script>
@@ -233,10 +243,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     		<!-- Foreword-Starts-Here -->
     		<div class="foreword " id="foreword">
-    			<p>"УВАЖАЕМЫЕ КОЛЛЕГИ, информируем Вас, что в декабре 2016 года в г. Харьков состоится 1-й Международный научно-технический семинар «Системный анализ, компьютерное моделирование, информационные технологии» “САКМИТ–2016”. Приглашаем ученых, работников научных учреж¬дений и предприятий, аспирантов, магистрантов и студентов принять участие в семинаре"</p>
+    			<p>УВАЖАЕМЫЕ КОЛЛЕГИ, информируем Вас, что в декабре 2016 года в г. Харьков состоится 1-й Международный научно-технический семинар «Системный анализ, компьютерное моделирование, информационные технологии» “САКМИТ–2016”. Приглашаем ученых, работников научных учреж¬дений и предприятий, аспирантов, магистрантов и студентов принять участие в семинаре</p>
     		</div>
     		<!-- //Foreword-Ends-Here -->
-
+                
 			<!-- Admissions-Starts-Here -->
         	<div class="admissions " id="admissions">
                 <h3>Требования к оформлению тезисов докладов</h3>
@@ -252,13 +262,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<li>Текст тезисов доклада – шрифт Times New Roman, 14 пт, одинарный междустрочный интервал, выравнивание по ширине, отступ первой строки абзаца 1,27 см, автоматические переносы в строках.</li>
 				<li>Формулы – шрифт Times New Roman, обычный символ – 14 пт, крупный индекс – 9 пт, мелкий индекс – 7 пт, междустрочный интервал – полуторный.</li>
 				<li>Список литературы – шрифт Times New Roman, 14пт, одинарный междустрочный интервал, выравнивание по ширине, отступ первой строки абзаца 0,8 см. Список литературы оформляется по ГОСТу, должен содержать не больше 5 наименований и размещаться сразу после текста доклада. Пропуск после списка литературы – 6 пт.</li>
-
-                <!-- Add a PDF file and give its link here if required -->
-                <div class="pdf">
-                	<a href="#"><sup>[RTF]</sup>Шаблон</a>
-                </div>
-                <div class="clearfix"></div>
-            </div>
+				<div id="materials">
+					
+        </div>
+      </div>
 			<!-- //Admissions-Ends-Here -->
 
 			<!-- AdmissionsSend-Starts-Here -->

@@ -553,6 +553,7 @@ h1.abbr {
 .foreword p {
     line-height: 35px;
     font-size: 24px;
+    text-align: justify;
 }
 .foreword span {
     display: block;

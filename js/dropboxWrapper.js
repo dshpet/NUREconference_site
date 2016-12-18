@@ -73,6 +73,7 @@ DropboxWrapper.prototype.getRichEntry = function(entry, callback) {
 			// https://milanaryal.com/hosting-images-with-dropbox-on-your-website/
 			data.staticLink = link.substring(0, link.length-5) + "?raw=1";
 			data.name       = link.substring(link.lastIndexOf('/') + 1, link.length-5);
+			data.extension  = data.name.substring(data.name.lastIndexOf('.') + 1);
 			callback(data);
 		})
 		.catch(function(e) {
