@@ -1048,6 +1048,13 @@ ul.social li a.youtube:hover {
     color: #009688;
     text-decoration: underline;
 }
+.copyright .admin a {
+    color:#666;
+}
+.copyright .admin a:hover {
+    color: #009633;
+    text-decoration: underline;
+}
 
 #toTop {
     display: none;
