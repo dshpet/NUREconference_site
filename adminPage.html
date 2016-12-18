@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Admin page</title>
+    <link rel='stylesheet' href="css/bootstrap.css"/>
+    <link rel='stylesheet' href="css/dashboard.css"/>
+    <link rel='stylesheet' href="css/adminPage.css"/>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Admin page</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a class="menuLink" href="#fileTable">Матуриалы</a></li>
+            <li><a class="menuLink" href="#imageTable">Изображения</a></li>
+          </ul>
+        </div>
+        <div class="col-md-9 col-md-offset-3 main">
+          <div class="containerData" id="fileTable">
+            <button class="btn btn-primary pull-right addNewFile">Add new file</button>
+            <input type="file" class="hidden">
+            <table class="table table-striped file-table">
+              <thead>
+                <tr>
+                  <th>Filename</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>asdasdasdasdasdasa.txt</td>
+                  <td><span class="glyphicon glyphicon-remove"></span></td>
+                </tr>
+                <tr>
+                  <td>asdasdasdasdasdasa.txt</td>
+                  <td><span class="glyphicon glyphicon-remove"></span></td>
+                </tr>
+                <tr>
+                  <td>asdasdasdasdasdasa.txt</td>
+                  <td><span class="glyphicon glyphicon-remove"></span></td>
+                </tr>
+                <tr>
+                  <td>asdasdasdasdasdasa.txt</td>
+                  <td><span class="glyphicon glyphicon-remove"></span></td>
+                </tr>
+                <tr>
+                  <td>asdasdasdasdasdasa.txt</td>
+                  <td><span class="glyphicon glyphicon-remove"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="containerData imageContent" id="imageTable" style="display: none;">
+            <div class="imageContainer">
+              <img src="images/0.jpg">
+              <span class="remove-link"><span class="glyphicon glyphicon-remove"></span></span>
+            </div>
+            <div class="imageContainer">
+              <img src="images/1.jpg">
+              <span class="remove-link"><span class="glyphicon glyphicon-remove"></span></span>
+            </div>
+            <div class="imageContainer">
+              <img src="images/2.jpg">
+              <span class="remove-link"><span class="glyphicon glyphicon-remove"></span></span>
+            </div>
+            <div class="imageContainer">
+              <img src="images/3.jpg">
+              <span class="remove-link"><span class="glyphicon glyphicon-remove"></span></span>
+            </div>
+            <div class="imageContainer">
+              <img src="images/4.jpg">
+              <span class="remove-link"><span class="glyphicon glyphicon-remove"></span></span>
+            </div>
+            <div class="imageContainer">
+              <img src="images/5.jpg">
+              <span class="remove-link"><span class="glyphicon glyphicon-remove"></span></span>
+            </div>
+            <div class="imageContainer">
+              <img src="images/6.jpg">
+              <span class="remove-link"><span class="glyphicon glyphicon-remove"></span></span>
+            </div>
+            <div class="imageContainer">
+              <img src="images/12.jpg">
+              <span class="remove-link"><span class="glyphicon glyphicon-remove"></span></span>
+            </div>
+            <div class="imageContainer">
+              <img src="images/11.jpg">
+              <span class="remove-link"><span class="glyphicon glyphicon-remove"></span></span>
+            </div>
+            <div class="imageContainer">
+              <img src="images/9.jpg">
+              <span class="remove-link"><span class="glyphicon glyphicon-remove"></span></span>
+            </div>
+            <div class="imageContainer">
+              <img src="images/15.jpg">
+              <span class="remove-link"><span class="glyphicon glyphicon-remove"></span></span>
+            </div>
+            <div class="imageContainer addNewResource">
+              <img src="images/plus.png" class="addNewFile">
+              <input type="file" class="hidden">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/adminPage.js"></script>
+  </body>
+</html>

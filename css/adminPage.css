@@ -1,0 +1,56 @@
+.file-table th:last-child,
+.file-table td:last-child {
+  text-align: center;
+}
+
+.file-table .glyphicon-remove {
+  color: #f00;
+  cursor: pointer;
+}
+
+.imageContent {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.imageContent .imageContainer {
+  flex-basis: 25%;
+  padding: 5px;
+  position: relative;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.remove-link {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  line-height: 0;
+  font-size: 200%;
+  background-color: #dce3e8;
+  cursor: pointer;
+}
+
+.remove-link .glyphicon-remove {
+  color: #f00;
+}
+
+.addNewResource {
+  border: 2px solid #dce3e8;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addNewResource .label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 150%;
+  text-align: center;
+  color: #1e23fb;
+}
