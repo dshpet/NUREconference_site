@@ -43,63 +43,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- Dropbox SDK-->
 <!-- https://github.com/dropbox/dropbox-sdk-js -->
 <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"></script>
-<script>  
-	var dbx = new Dropbox({ accessToken: 'SdpQ9VQetwAAAAAAAAAADGoitoKomn34rv1Jg00gjfMJsLLCvO6emOzEELNBwcf_' }); // dont steal my token please, thx in advance
-	dbx.filesListFolder({path: ''})
-		.then(function(response) {
-		  console.log(response);
-		})
-		.catch(function(error) {
-		  console.log(error);
-		});
-	
-	function uploadImage() {
-		var fileInput = document.getElementById('file-upload');
-		var file = fileInput.files[0];
-		dbx.filesUpload({path: '/Images/' + file.name, contents: file})
-			.then(function(response) {
-		    	console.log(response);
-		  	})
-		  	.catch(function(error) {
-		    	console.error(error);
-		  	});
-
-		return false;
-	}
-
-	function getStaticLinksForImages() {
-		var links = [];
-
-		dbx.filesListFolder({path: '/Images/'})
-    	   	.then(function(response) {
-    	    	console.log(response);
-    	    	for (var i = response.entries.length - 1; i >= 0; i--) {
-    	    		var entry = response.entries[i];
-    	    		
-    	    		dbx.sharingCreateSharedLink({path: entry.path_display, short_url: false})
-    	    			.then(function(data) {
-    	    				console.log(data);
-    	    				var link = data.url;
-    	    				// https://milanaryal.com/hosting-images-with-dropbox-on-your-website/
-    	    				var staticLink = link.substring(0, link.length-5) + "?raw=1";
-    	    				console.log(staticLink);
-    	    				links.push(staticLink);
-    	    			})
-    	    			.catch(function(error) {
-    	    				console.log(error);
-    	    			})
-    	    	}
-    	    	console.log(links);        
-    	   	})
-    	   	.catch(function(error) {
-    	   		console.error(error);
-    	   	});
-
-    	return links;
-   	}
-
+<script src="js/dropboxWrapper.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var db = new DropboxWrapper();
+	  db.forEachMaterialFile(function(file) {
+	  	// $TODO UI
+		  //$('#materials').append('<a href="' + file.staticLink + '">' + file.name + "</a>");
+	  });
+	});
 </script>
-<!-- //Dropbox SDK-->
 
 
 <!-- Calender-JavaScript -->

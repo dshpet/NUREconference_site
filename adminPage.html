@@ -20,14 +20,14 @@
       <div class="row">
         <div class="col-md-3 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a class="menuLink" href="#fileTable">Матуриалы</a></li>
+            <li class="active"><a class="menuLink" href="#fileTable">Материалы</a></li>
             <li><a class="menuLink" href="#imageTable">Изображения</a></li>
           </ul>
         </div>
         <div class="col-md-9 col-md-offset-3 main">
           <div class="containerData" id="fileTable">
             <button class="btn btn-primary pull-right addNewFile">Add new file</button>
-            <input type="file" class="hidden">
+            <input id="input-material" type="file" class="hidden">
             <table class="table table-striped file-table">
               <thead>
                 <tr>
@@ -35,27 +35,7 @@
                   <th>Delete</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>asdasdasdasdasdasa.txt</td>
-                  <td><span class="glyphicon glyphicon-remove"></span></td>
-                </tr>
-                <tr>
-                  <td>asdasdasdasdasdasa.txt</td>
-                  <td><span class="glyphicon glyphicon-remove"></span></td>
-                </tr>
-                <tr>
-                  <td>asdasdasdasdasdasa.txt</td>
-                  <td><span class="glyphicon glyphicon-remove"></span></td>
-                </tr>
-                <tr>
-                  <td>asdasdasdasdasdasa.txt</td>
-                  <td><span class="glyphicon glyphicon-remove"></span></td>
-                </tr>
-                <tr>
-                  <td>asdasdasdasdasdasa.txt</td>
-                  <td><span class="glyphicon glyphicon-remove"></span></td>
-                </tr>
+              <tbody id="file-table-body">
               </tbody>
             </table>
           </div>
@@ -116,6 +96,8 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"></script>
+    <script src="js/dropboxWrapper.js"></script>
     <script src="js/adminPage.js"></script>
   </body>
 </html>
