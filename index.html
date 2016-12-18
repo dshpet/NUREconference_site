@@ -124,23 +124,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				                <div id="loginpop">
 					                <a href="#" id="signupButton"><span>Регистрация</span></a>
 					                <div id="signupBox">
-						                <form id="signupForm">
+						                <form id="signupForm" action="/php/registration.php" method="POST">
 							                <fieldset id="body">
 								                <fieldset>
-									                <label for="email">Имя</label>
-									                <input type="text" name="email" id="email">
+									                <label for="email">Sender</label>
+									                <input type="text" name="sender" id="email">
 								                </fieldset>
 								                <fieldset>
-								                	<label for="email">Email</label>
-								                	<input type="text" name="email" id="email">
+								                	<label for="email">Subject</label>
+								                	<input type="text" name="subject" id="subject">
 								                </fieldset>
 								                <fieldset>
-								                	<label for="email">Логин</label>
-								                	<input type="text" name="email" id="email">
-								                </fieldset>
-								                <fieldset>
-								                	<label for="password">Пароль</label>
-								                	<input type="password" name="password" id="password">
+								                	<label for="email">Body</label>
+								                	<input type="text" name="body" id="body">
 								                </fieldset>
 							                		<input type="submit" id="login" value="SIGNUP">
 							                </fieldset>
@@ -707,7 +703,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	        <div class="copyright">
             <p>&copy; 2016 САКМИТ. Все права защищены | Design by <a href="http://w3layouts.com/"> W3layouts </a></p>
 		        <div class="admin">
-		        	<p><a href="/login">Панель администратора</a></p>
+		        	<p><a href="/php/login.php">Панель администратора</a></p>
 		        </div>
 	        </div>
 

@@ -10,65 +10,9 @@ String.prototype.hashCode = function() {
   return hash;
 };
 
-var hashes = [
-	1216985755
-];
-
-function tryLogin() {
-	var password = $('#password').val();
-	var hash     = password.hashCode();
-
-	if (hashes.indexOf(hash) < 0)
-		tryAgain();
-	else
-		onLoggedIn();
-}
-
-function tryAgain() {
-	console.log('wrong password');
-	// maybe some red glowing animation?
-}
-
-function giveCookie() {
-	var expirationDate = new Date();
-	expirationDate.setTime(expirationDate.getTime() + 7 * 24 * 60 * 60);
-	document.cookie = 'hasAdminAccess=1; expires=' + 
-	                  expirationDate.toUTCString() +
-	                  ';';
-}
-
-function onLoggedIn() {
-	console.log('logged in');
-	giveCookie();
-	goToAdminPage();
-}
-
-// Returns Bool
-function tryRefreshCookie() {
-	var cookieParts = document.cookie.split(';');
-	for (var i = 0; i < cookieParts.length; ++i) {
-		var part = cookieParts[i].trim();
-		if (part.indexOf('hasAdminAccess') >= 0) {
-			giveCookie(); // refresh expiration date
-			return true;
-		}
-	}
-
-	return false;
-}
-
-function goToAdminPage() {
-	window.location.href = "/adminPage";
-}
-
 $(document).ready(function() {
-	// Redirect if already has cookie
-	if (tryRefreshCookie())
-		goToAdminPage();
-	else {
-		$('#login-form').submit(function(e) {
-			e.preventDefault();
-			tryLogin();
-		})
-	}
+	$('#login-form').submit(function() {
+		var password = $('#password').val();
+		$('#password').val(password.hashCode());
+	})
 });
