@@ -87,4 +87,9 @@ $(document).ready( function() {
     }
   });
 
+
+  $(document).on('click', '.load-file' ,function () {
+    $(this).siblings('input[type=file]').trigger('click');
+  });
+
 });

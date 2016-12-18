@@ -23,7 +23,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- Bootstrap Styling --> <link rel='stylesheet' href="css/bootstrap.css" type='text/css' />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> <script src="js/jquery.min.js"></script>
     <!-- Bootstrap-Working-File --> <script src="js/bootstrap.min.js"></script>
-    <!-- Index-Page-Styling --> <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />   
+    <!-- Index-Page-Styling --> <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<!-- Owl-Carousel-Styling --> <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all">
 <!-- //Custom Theme files -->
 
@@ -32,7 +32,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function($) {
-        $(".scroll").click(function(event){     
+        $(".scroll").click(function(event){
             event.preventDefault();
             $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
         });
@@ -95,7 +95,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	                <!-- Logo --><a class="navbar-brand" href="#">САКМИТ-2016</a><!-- //Logo -->
 
 	            </div>
-	            
+
 	            <!-- Navbar-Collapse -->
 	            <div id="navbar" class="navbar-collapse collapse">
 
@@ -206,7 +206,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- Content-Starts-Here -->
     <div class="content">
     	<div class="container">
-    		   		
+
     		<!-- About-Starts-Here -->
     		<div class="about " id="about">
 
@@ -226,11 +226,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li>Цифровые медиа технологии.</li>
 						<li>Информационно-коммуникационные системы и технологии.</li>
 					</ul>
-				<p>	
+				<p>
 
                 <div class="about-info ">
                     <div class="col-md-6 col-sm-6" id="about-pic">
-                        <img src="images/9.jpg" alt="About">                   
+                        <img src="images/9.jpg" alt="About">
                     </div>
                     <div class="col-md-6 col-sm-6" id="about-p">
                         <p>По предварительному согласованию с Оргкомитетом семинара возможно проведение круглых столов, обсуждение статей, книг и диссертаций.</p>
@@ -246,7 +246,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     			<p>УВАЖАЕМЫЕ КОЛЛЕГИ, информируем Вас, что в декабре 2016 года в г. Харьков состоится 1-й Международный научно-технический семинар «Системный анализ, компьютерное моделирование, информационные технологии» “САКМИТ–2016”. Приглашаем ученых, работников научных учреж¬дений и предприятий, аспирантов, магистрантов и студентов принять участие в семинаре</p>
     		</div>
     		<!-- //Foreword-Ends-Here -->
-                
+
 			<!-- Admissions-Starts-Here -->
         	<div class="admissions " id="admissions">
                 <h3>Требования к оформлению тезисов докладов</h3>
@@ -263,7 +263,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<li>Формулы – шрифт Times New Roman, обычный символ – 14 пт, крупный индекс – 9 пт, мелкий индекс – 7 пт, междустрочный интервал – полуторный.</li>
 				<li>Список литературы – шрифт Times New Roman, 14пт, одинарный междустрочный интервал, выравнивание по ширине, отступ первой строки абзаца 0,8 см. Список литературы оформляется по ГОСТу, должен содержать не больше 5 наименований и размещаться сразу после текста доклада. Пропуск после списка литературы – 6 пт.</li>
 				<div id="materials">
-					
+
         </div>
       </div>
 			<!-- //Admissions-Ends-Here -->
@@ -272,7 +272,39 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         	<div class="admissions " id="send">
                 <h3>Подача материалов</h3>
                 <p>Заявки (на всех соавторов в одном файле) и тезисы докладов оформляются по приведенной форме и представляются в виде отдельных файлов по адресу <a class="mail" href="mailto:sakmit@ukr.net">sakmit@ukr.net</a> к указанным срокам.</p>
-                <div class="clearfix"></div>
+				<input type="button" class="more_btn" value="Подать материалы через сайт" data-toggle="modal" data-target="#registrationModal">
+				<div class="clearfix"></div>
+            </div>
+
+            <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <form action="">
+                    <div class="modal-dialog" role="document" style="margin-top: 100px">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h5 class="modal-title" id="myModalLabel" style="padding: 20px;">Подача материалов</h5>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                  <label for="firstName" class="control-label">Имя:</label>
+                                  <input type="text" class="form-control" id="firstName">
+                                </div>
+                                <div class="form-group">
+                                  <label for="lastName" class="control-label">Фамилия:</label>
+                                  <input type="text" class="form-control" id="lastName">
+                                </div>
+                                <div class="text-right">
+                                  <span class="btn btn-primary btn-info btn-block load-file">Загрузить файлы</span>
+                                  <input type="file" class="hidden">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                                <button type="success" class="btn btn-success">Подать материалы</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
 			<!-- //AdmissionsSend-Ends-Here -->
 
@@ -331,7 +363,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			                    <p>Сопредседатель</p>
 			                    <p>академик АНПРЭ, зав. каф. ПИ ХНУРЭ, к.т.н., проф., Украина</p>
                    		</div>
-					</div>				
+					</div>
 					<div class="col-md-3 col-sm-3 team-top">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/Zhivitskaya.jpg" alt="name"></div>
@@ -617,7 +649,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         	</div>
 			<!-- //sponsors-Ends-Here -->
 
-			
+
 
 			<!-- Contact-Starts-Here -->
         	<div class="contact" id="contact">
@@ -628,8 +660,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         		<div>
 					АДРЕС ОРГКОМИТЕТА
 					61166, Украина, г. Харьков, пр. Науки, 14, ХНУРЭ,
-					к. 267, кафедра ПИ, тел.: (057)-7021-436. 
-					
+					к. 267, кафедра ПИ, тел.: (057)-7021-436.
+
 					E-mail:  <a class="mail" href="mailto:sakmit@ukr.net">sakmit@ukr.net</a>
         		</div>
         		<div class="contact-form-wrapper">
@@ -716,8 +748,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         <!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
         <script type="text/javascript">
-            $(document).ready(function() {      
-                $().UItoTop({ easingType: 'easeOutQuart' });            
+            $(document).ready(function() {
+                $().UItoTop({ easingType: 'easeOutQuart' });
             });
         </script>
         <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
@@ -746,7 +778,7 @@ $(document).ready(function(){
     $('html, body').stop().animate({
       scrollTop: offset.top - 50
     }, 900, function(){
-   
+
       // Add hash (#) to URL when done scrolling (default click behavior)
       window.location.hash = hash;
     });
