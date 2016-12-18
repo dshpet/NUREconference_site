@@ -48,7 +48,7 @@ function addImage(name, link) {
 	div.append(img);
 	div.append(spanOuter);
 
-	$('#imageTable').append(div);
+	$('#imageTable .imageContent').append(div);
 }
 
 function removeImage(div, name) {
