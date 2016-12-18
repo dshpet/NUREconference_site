@@ -10,6 +10,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>САКМИТ-2016</title>
 
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
 <!-- For-Mobile-Apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -77,11 +79,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     	    		dbx.sharingCreateSharedLink({path: entry.path_display, short_url: false})
     	    			.then(function(data) {
     	    				console.log(data);
-    	    				var link = data.url
+    	    				var link = data.url;
     	    				// https://milanaryal.com/hosting-images-with-dropbox-on-your-website/
     	    				var staticLink = link.substring(0, link.length-5) + "?raw=1";
     	    				console.log(staticLink);
-    	    				links.push(staticLink)
+    	    				links.push(staticLink);
     	    			})
     	    			.catch(function(error) {
     	    				console.log(error);
@@ -282,7 +284,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     		<!-- Foreword-Starts-Here -->
     		<div class="foreword " id="foreword">
-    			<h3>Вступительное слово</h3>
     			<p>"УВАЖАЕМЫЕ КОЛЛЕГИ, информируем Вас, что в декабре 2016 года в г. Харьков состоится 1-й Международный научно-технический семинар «Системный анализ, компьютерное моделирование, информационные технологии» “САКМИТ–2016”. Приглашаем ученых, работников научных учреж¬дений и предприятий, аспирантов, магистрантов и студентов принять участие в семинаре"</p>
     		</div>
     		<!-- //Foreword-Ends-Here -->
@@ -348,12 +349,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<!-- Orgcommittee-Starts-Here -->
             <div class="faculty " id="orgcommittee">
 	            <h3>ОРГКОМИТЕТ СЕМИНАРА</h3>
+	            <ul class="col-md-10 col-md-offset-2 themes-list">
+								<li>Сопредседатель – Тевяшев А.Д., академик УНГА, зав. каф. ПМ ХНУРЭ, д.т.н., проф., Украина,</li>
+								<li>Сопредседатель – Дударь З.В., академик АНПРЭ, зав. каф. ПИ ХНУРЭ, к.т.н., проф., Украина,</li>
+								<li>Сопредседатель – Живицкая Е.Н., проректор по учебной работе БГУИР,  к.т.н., проф., Беларусь,</li>
+								<li>Почетный сопредседатель – проф. H. Sobczuk, директор Представительства Польской академии наук в Киеве. </li>
+								<li>Заместитель председателя</li>
+								<li>Кобзев В.Г., доц. каф. ПМ ХНУРЭ, к.т.н., с.н.с.</li>
+ 								<p>Секретариат:</p>
+								<li>Драз О.М., каф. СТ ХНУРЭ,</li>
+								<li>Копоть М.А., каф. ПИ ХНУРЭ.</li>
+	            </ul>
 	            	<div class="col-md-3 col-sm-3 team-top">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/Tevjashev.png" alt="Tevjashev"></div>
 			                    <h6>Тевяшев А.Д</h6>
 			                    <p>Сопредседатель</p>
-			                    <p>академик УНГА, зав. каф. ПМ ХНУРЭ, д.т.н., проф.</p>
+			                    <p>академик УНГА, зав. каф. ПМ ХНУРЭ, д.т.н., проф., Украина</p>
                    		</div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top">
@@ -361,7 +373,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/Dudar.jpg" alt="name"></div>
 			                    <h6>Дударь З.В</h6>
 			                    <p>Сопредседатель</p>
-			                    <p>академик АНПРЭ, зав. каф. ПИ ХНУРЭ, к.т.н., проф.</p>
+			                    <p>академик АНПРЭ, зав. каф. ПИ ХНУРЭ, к.т.н., проф., Украина</p>
                    		</div>
 					</div>				
 					<div class="col-md-3 col-sm-3 team-top">
@@ -369,7 +381,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/Zhivitskaya.jpg" alt="name"></div>
 			                    <h6>Живицкая Е.Н</h6>
 			                    <p>Сопредседатель</p>
-			                    <p>проректор по учебной работе БГУИР, Беларусь, к.т.н., проф.</p>
+			                    <p>проректор по учебной работе БГУИР, к.т.н., проф., Беларусь</p>
                    		</div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top">
@@ -377,7 +389,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/noimage.png" alt="name"></div>
 			                    <h6>H. Sobczuk</h6>
 			                    <p>Почетный сопредседатель</p>
-			                    <p>директор Представительства Польской академии наук в Киеве, проф.</p>
+			                    <p>директор Представительства Польской академии наук в Киеве, проф., Польша</p>
                    		</div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top">
@@ -392,18 +404,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/noimage.png" alt="name"></div>
 			                    <h6>Драз О.М</h6>
-			                    <p>Секретариат</p>
-			                    <p>инж. каф. СТ ХНУРЭ</p>
+			                    <p>каф. СТ ХНУРЭ</p>
                    		</div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/noimage.png" alt="name"></div>
-			                    <h6>____________</h6>
-			                    <p>Секретариат</p>
+			                    <h6>Копоть М.А.</h6>
 			                    <p>каф. ПИ ХНУРЭ</p>
                    		</div>
-					</div>			
+					</div>
 					<div class="clearfix"> </div>
 	        </div>
 			<!-- //Orgcommittee-Ends-Here -->
@@ -411,116 +421,157 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<!-- Progcommittee-Starts-Here -->
             <div class="faculty " id="progcommittee">
 	            <h3>ПРОГРАММНЫЙ КОМИТЕТ СЕМИНАРА</h3>
+	            <ul class="col-md-10 col-md-offset-3 themes-list">
+								<li>Председатель – проф. Ерохин А.Л., ХНУРЭ, Украина </li>
+								<li>Заместитель председателя – проф. Бескоровайный В.В., ХНУРЭ, Украина</li>
+								<li>проф. Антощук С.Г., ОНПУ, Украина</li>
+								<li>проф. Бодянский Е.В., ХНУРЭ, Украина</li>
+								<li>проф. Горбенко И.Д., ХНУ, Украина</li>
+								<li>проф. Гребенник И.В., ХНУРЭ, Украина</li>
+								<li>проф. Данилов В.Я., ИПСА НТТУ «КПИ»,  Украина</li>
+								<li>доц.  Дядюн С.В., ХНУГХ, Украина</li>
+								<li>проф. Железко Б.А., БГЭУ, Беларусь</li>
+								<li>проф. Кобозева А.А., ОНПУ, Украина,</li>
+								<li>проф. Пономарев Ю.В., «Укртрансгаз», Украина</li>
+								<li>проф. Рыбальский О.В., НАВД, Украина</li>
+								<li>проф. Филатов В.А., ХНУРЭ, Украина</li>
+								<li>проф. Хажмурадов М.А., ННЦ ХФТИ, Украина</li>
+								<li>проф. Шубин И.Ю., ХНУРЭ, Украина</li>
+								<li>проф. E. Krasowski, ПАН, Польша</li>
+								<li>проф. A. Kusz, ПАН, Польша</li>
+								<li>проф. P. Komada, Люблинская Политехника, Польша</li>
+             </ul>
 	            <div class="col-md-3 col-sm-3 team-top">
+	            	<div class="view view-seventh">
+							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/Yerokhin.jpg" alt="name"></div>
+			                    <h6>Ерохин А.Л.</h6>
+			                    <p>Председатель – ХНУРЭ, Украина</p>
+                   		</div>
+					</div>
+					<div class="col-md-3 col-sm-3 team-top team-in">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/Beskorovainii.jpg" alt="name"></div>
 			                    <h6>Бескоровайный В.В</h6>
-			                    <p>Председатель – д.т.н., профессор ХНУРЭ</p>
+			                    <p>Заместитель председателя – ХНУРЭ, Украина</p>
                    		</div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top team-in">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/noimage.png" alt="name"></div>
 			                    <h6>Бодянский Е.В</h6>
-			                    <p>Профессор ХНУРЭ</p>
+			                    <p>ХНУРЭ, Украина</p>
+                   		 </div>
+					</div>
+					<div class="col-md-3 col-sm-3 team-top team-in">
+						<div class="view view-seventh">
+							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/noimage.png" alt="name"></div>
+			                    <h6>Антощук С.Г.</h6>
+			                    <p>ХНУРЭ, Украина</p>
                    		 </div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/Gorbenko.jpg" alt="name"></div>
 			                    <h6>Горбенко И.Д</h6>
-			                    <p>Профессор ХНУ</p>
+			                    <p>ХНУ, Украина</p>
                    		</div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top top-team">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/Grebennik.jpg" alt="name"></div>
 			                    <h6>Гребенник И.В</h6>
-			                    <p>Профессор ХНУРЭ</p>
+			                    <p>ХНУРЭ, Украина</p>
 			            </div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top top-team">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/noimage.png" alt="name"></div>
 			                    <h6>Данилов А.П</h6>
-			                    <p>Профессор ИПСА НТТУ «КПИ»</p>
+			                    <p>ИПСА НТТУ «КПИ», Украина</p>
 			            </div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top top-team">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/Dudar.jpg" alt="name"></div>
 			                    <h6>Дударь З.В</h6>
-			                    <p>Профессор ХНУРЭ</p>
+			                    <p>ХНУРЭ, Украина</p>
 			            </div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top top-team">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/noimage.png" alt="name"></div>
 			                    <h6>Дядюн С.В</h6>
-			                    <p>Профессор ХНУРЭ</p>
+			                    <p>ХНУРЭ, Украина</p>
 			            </div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top top-team">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/noimage.png" alt="name"></div>
 			                    <h6>Железко Б.А</h6>
-			                    <p>Профессор ХНУРЭ</p>
+			                    <p>ХНУРЭ, Украина</p>
 			            </div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top top-team">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/Kobzeva.jpg" alt="name"></div>
-			                    <h6>Кобзева А.А</h6>
-			                    <p>Профессор ОНПУ</p>
+			                    <h6>Кобозева А.А</h6>
+			                    <p>ОНПУ, Украина</p>
 			            </div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top top-team">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/Ponamarev(NOT SURE).jpg" alt="name"></div>
 			                    <h6>Пономарев Ю.В</h6>
-			                    <p>Профессор «Укртрансгаз»</p>
+			                    <p>«Укртрансгаз», Украина</p>
+			            </div>
+					</div>
+					<div class="col-md-3 col-sm-3 team-top top-team">
+						<div class="view view-seventh">
+							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/Philatov.jpg" alt="name"></div>
+			                    <h6>Рыбальский О.В.</h6>
+			                    <p>НАВД, Украина</p>
 			            </div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top top-team">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/Philatov.jpg" alt="name"></div>
 			                    <h6>Филатов В.А</h6>
-			                    <p>Профессор ХНУРЭ</p>
+			                    <p>ХНУРЭ, Украина</p>
 			            </div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top top-team">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/noimage.png" alt="name"></div>
 			                    <h6>Хажмурадов М.А</h6>
-			                    <p>Профессор ННЦ ХФТИ</p>
+			                    <p>ННЦ ХФТИ, Украина</p>
 			            </div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top top-team">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/Shubin.jpg" alt="name"></div>
 			                    <h6>Шубин И.Ю</h6>
-			                    <p>Профессор ХНУРЭ</p>
+			                    <p>ХНУРЭ, Украина</p>
 			            </div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top top-team">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/noimage.png" alt="name"></div>
 			                    <h6>E. Krasowski</h6>
-			                    <p>Профессор ПАН</p>
+			                    <p>ПАН, Польша</p>
 			            </div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top top-team">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/noimage.png" alt="name"></div>
 			                    <h6>A. Kusz</h6>
-			                    <p>Профессор ПАН</p>
+			                    <p>ПАН, Польша</p>
 			            </div>
 					</div>
 					<div class="col-md-3 col-sm-3 team-top top-team">
 						<div class="view view-seventh">
 							<div class="img-wrapper"><img class="img-responsive" src="images/Staff/noimage.png" alt="name"></div>
 			                    <h6>P. Komada</h6>
-			                    <p>Профессор Люблинская Политехника</p>
+			                    <p>Люблинская Политехника, Польша</p>
 			            </div>
 					</div>
 					<div class="clearfix"> </div>
@@ -613,7 +664,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 			<!-- sponsors-Starts-Here -->
         	<div class="news " id="sponsors">
-        		<h3>УЧАСТНИКИ</h3>
+        		<h3>ОРГАНИЗАТОРЫ</h3>
         	  	<div class="container">
 	        		<ul class="col-md-8 col-md-offset-2 themes-list">
 	        			<li>Министерство образования и науки Украины</li>
