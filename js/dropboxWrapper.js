@@ -39,12 +39,23 @@ DropboxWrapper.prototype.uploadFile = function(path, file, callback) {
 	var wrapper = this;
 	this.dbx.filesUpload({path: path + "/" + file.name, contents: file})
 		.then(function(response) {
-			  console.log(response);
+			console.log(response);
 	    	wrapper.getRichEntry(response, callback);
 	  	})
 		.catch(function(e) {
 			console.log(e);
 		})
+}
+
+DropboxWrapper.prototype.deleteFile = function(path, callback) {
+	this.dbx.filesDelete({path: path})
+		.then(function(response) {
+			console.log(response);
+			callback();
+		})
+		.catch(function(e)) {
+			console.log(e);
+		}
 }
 
 DropboxWrapper.prototype.getRichEntry = function(entry, callback) {
