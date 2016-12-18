@@ -47,15 +47,23 @@ DropboxWrapper.prototype.uploadFile = function(path, file, callback) {
 		})
 }
 
+DropboxWrapper.prototype.deleteImage = function(name, callback) {
+	this.deleteFile('/Images/' + name, callback);
+}
+
+DropboxWrapper.prototype.deleteMaterial = function(name, callback) {
+	this.deleteFile('/Materials/' + name, callback);
+}
+
 DropboxWrapper.prototype.deleteFile = function(path, callback) {
 	this.dbx.filesDelete({path: path})
 		.then(function(response) {
-			console.log(response);
 			callback();
 		})
-		.catch(function(e)) {
+		.catch(function(e) {
+			callback({error: e});
 			console.log(e);
-		}
+		});
 }
 
 DropboxWrapper.prototype.getRichEntry = function(entry, callback) {

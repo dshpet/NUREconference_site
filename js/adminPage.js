@@ -1,3 +1,5 @@
+var db = new DropboxWrapper();
+
 $(document).on('click', '.menuLink', function () {
   var ele = $(this);
   var hash = ele.prop('hash');
@@ -17,7 +19,7 @@ function addFile(name, link) {
 	var td   = $('<td>');
 	var span = $('<span class="glyphicon glyphicon-remove">');
 	span.click(function() {
-		removeFile(name);
+		removeFile(tr, name);
 	});
 	
 	tr.append($('<td>' + name + '</td>'));
@@ -27,15 +29,16 @@ function addFile(name, link) {
   $('#file-table-body').append(tr);
 }
 
-function removeFile(name) {
-	// is it even possible to remove files via dropbox api?
-	console.log('remove: ' + name);
+function removeFile(tr, name) {
+	db.deleteMaterial(name, function(err) {
+		if (err)
+			return; // maybe some flashy red animation?
+
+		$(tr).remove();
+	})
 }
 
 $(document).ready(function() {
-
-	var db = new DropboxWrapper();
-
 	$('#input-material').change(function() {
 		var files = $(this).context.files;
 		
