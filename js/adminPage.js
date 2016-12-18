@@ -10,10 +10,6 @@ $(document).on('click', '.menuLink', function () {
   ele.closest('li').addClass('active');
 });
 
-$(document).on('click', '.addNewFile', function () {
-  $('#input-material').trigger('click');
-});
-
 function addFile(name, link) {
 	var tr   = $('<tr>');
 	var td   = $('<td>');
@@ -38,19 +34,74 @@ function removeFile(tr, name) {
 	})
 }
 
-$(document).ready(function() {
+function addImage(name, link) {
+	var div       = $('<div class="imageContainer">');
+	var img       = $('<img src="' + link + '" alt="' + name + '">');
+	var spanOuter = $('<span class="remove-link">');
+	var spanInner = $('<span class="glyphicon glyphicon-remove">');
+
+	spanInner.click(function() {
+		removeImage(div, name);
+	});
+
+	spanOuter.append(spanInner);
+	div.append(img);
+	div.append(spanOuter);
+
+	$('#imageTable').append(div);
+}
+
+function removeImage(div, name) {
+	db.deleteImage(name, function(err) {
+		if (err)
+			return; // maybe some flashy red animation?
+
+		$(div).remove();
+	})
+}
+
+function initMaterials() {
 	$('#input-material').change(function() {
 		var files = $(this).context.files;
 		
 		for (var i = 0; i < files.length; ++i) {
 			db.uploadMaterial(files[i], function(file) {
 				addFile(file.name, file.staticLink);
-			})
+			});
 		}
 	});
 
 	db.forEachMaterialFile(function(file) {
 		addFile(file.name, file.staticLink);		
-	})
+	});
+}
+
+function initImages() {
+	$('#input-image').change(function() {
+		var files = $(this).context.files;
+		
+		for (var i = 0; i < files.length; ++i) {
+			db.uploadImage(files[i], function(file) {
+				addImage(file.name, file.staticLink);
+			});
+		}
+	});
+
+	db.forEachImageFile(function(file) {
+		addImage(file.name, file.staticLink);		
+	});
+}
+
+$(document).ready(function() {
+	initMaterials();
+	initImages();
+
+	$('#add-material').click(function () {
+    $('#input-material').trigger('click');
+  });
+
+  $('#add-image').click(function () {
+    $('#input-image').trigger('click');
+  });
 });
 
