@@ -1,3 +1,11 @@
+$.ajax({
+	url: '/php/is_admin.php',
+	success: function(response) {
+		if (!JSON.parse(response).hasAdminAccess)
+			window.location.href = "/";
+	}
+});
+
 var db = new DropboxWrapper();
 
 $(document).on('click', '.menuLink', function () {
