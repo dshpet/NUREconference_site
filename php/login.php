@@ -7,6 +7,7 @@ include "cookies.php";
 function onLoggedIn() {
   Cookies::give();
   header("Location: http://".$_SERVER['HTTP_HOST']."/adminPage.html", true, 301);
+  die();
 }
 
 $hashes = [
