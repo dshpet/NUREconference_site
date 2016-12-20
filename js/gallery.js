@@ -64,24 +64,22 @@ $(function() {
 			// control if one image is being loaded
 			anim			= false,
 			init			= function() {
-				
-				// (not necessary) preloading the images here...
-				$items.add('<img src="images/ajax-loader.gif"/>').imagesLoaded( function() {
-					// add options
-					_addViewModes();
+				// add options
+				_addViewModes();
 					
-					// add large image wrapper
-					_addImageWrapper();
-					
-					// show first image
-					_showImage( $items.eq( current ) );
-						
-				});
-				
+				// add large image wrapper
+				_addImageWrapper();
+
 				// initialize the carousel
 				if( mode === 'carousel' )
 					_initCarousel();
 				
+			},
+			showLast = function() {
+				_showImage( $items.eq( $items.length - 1  ) );
+			},
+			showNext = function() {
+				_navigate('right');
 			},
 			_initCarousel	= function() {
 				
@@ -141,41 +139,39 @@ $(function() {
 				
 				$('#img-wrapper-tmpl').tmpl( {itemsCount : itemsCount} ).appendTo( $rgGallery );
 				
-				if( itemsCount > 1 ) {
-					// addNavigation
-					var $navPrev		= $rgGallery.find('a.rg-image-nav-prev'),
-						$navNext		= $rgGallery.find('a.rg-image-nav-next'),
-						$imgWrapper		= $rgGallery.find('div.rg-image');
-						
-					$navPrev.on('click.rgGallery', function( event ) {
-						_navigate( 'left' );
-						return false;
-					});	
+				
+				// addNavigation
+				var $navPrev		= $rgGallery.find('a.rg-image-nav-prev'),
+					$navNext		= $rgGallery.find('a.rg-image-nav-next'),
+					$imgWrapper		= $rgGallery.find('div.rg-image');
 					
-					$navNext.on('click.rgGallery', function( event ) {
+				$navPrev.on('click.rgGallery', function( event ) {
+					_navigate( 'left' );
+					return false;
+				});	
+				
+				$navNext.on('click.rgGallery', function( event ) {
+					_navigate( 'right' );
+					return false;
+				});
+			
+				// add touchwipe events on the large image wrapper
+				$imgWrapper.touchwipe({
+					wipeLeft			: function() {
 						_navigate( 'right' );
-						return false;
-					});
-				
-					// add touchwipe events on the large image wrapper
-					$imgWrapper.touchwipe({
-						wipeLeft			: function() {
-							_navigate( 'right' );
-						},
-						wipeRight			: function() {
-							_navigate( 'left' );
-						},
-						preventDefaultEvents: false
-					});
-				
-					$(document).on('keyup.rgGallery', function( event ) {
-						if (event.keyCode == 39)
-							_navigate( 'right' );
-						else if (event.keyCode == 37)
-							_navigate( 'left' );	
-					});
-					
-				}
+					},
+					wipeRight			: function() {
+						_navigate( 'left' );
+					},
+					preventDefaultEvents: false
+				});
+			
+				$(document).on('keyup.rgGallery', function( event ) {
+					if (event.keyCode == 39)
+						_navigate( 'right' );
+					else if (event.keyCode == 37)
+						_navigate( 'left' );	
+				});
 				
 			},
 			_navigate		= function( dir ) {
@@ -244,17 +240,28 @@ $(function() {
 		
 		return { 
 			init 		: init,
-			addItems	: addItems
+			addItems: addItems,
+			showLast: showLast,
+			showNext: showNext
 		};
 	
 	})();
 
 	Gallery.init();
 	
-	/*
-	Example to add more items to the gallery:
-	
-	var $new  = $('<li><a href="#"><img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>');
-	Gallery.addItems( $new );
-	*/
+	var dbx = new DropboxWrapper();
+	dbx.forEachImageFile(function(file) {
+		var $new  = $('<li><a href="#"><img src="' +
+		             file.staticLink               +
+		             '" data-large="'              +
+		             file.staticLink               +
+		             '"</a></li>');
+
+	  Gallery.addItems( $new );
+	  Gallery.showLast();
+	});
+
+	$(document).click('.rg-image', function() {
+		Gallery.showNext();
+	});
 });

@@ -9,8 +9,10 @@
     <meta name="keywords" content="jquery, carousel, image gallery, slider, responsive, flexible, fluid, resize, css3" />
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="favicon.ico">
+    <link rel='stylesheet' href="css/bootstrap.css" type='text/css' />
     <link rel="stylesheet" type="text/css" href="css/gallery.css" />
     <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+
     <noscript>
       <style>
         .es-carousel ul{
@@ -20,12 +22,10 @@
     </noscript>
     <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
 			<div class="rg-image-wrapper">
-				{{if itemsCount > 1}}
 					<div class="rg-image-nav">
 						<a href="#" class="rg-image-nav-prev">Previous Image</a>
 						<a href="#" class="rg-image-nav-next">Next Image</a>
 					</div>
-				{{/if}}
 				<div class="rg-image"></div>
 				<div class="rg-loading"></div>
 				<div class="rg-caption-wrapper">
@@ -37,6 +37,36 @@
 		</script>
   </head>
   <body>
+    <!-- Header-Starts-Here -->
+  <div class="header">
+
+    <!-- Navbar-Starts-Here -->
+      <nav class="navbar navbar-inverse">
+          <div class="container">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+
+                  <!-- Logo --><a class="navbar-brand" href="#">САКМИТ-2016</a><!-- //Logo -->
+
+              </div>
+              <!-- Navbar-Collapse -->
+              <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/" class="scroll">Назад</a></li>
+                  </ul>
+              </div>
+              <!-- //Navbar-Collapse -->
+          </div>
+      </nav>
+      <!-- //Navbar-Ends-Here -->
+  </div>
+  <!-- Header-Ends-Here -->
+
     <div class="container">
       <div class="content">
         <div id="rg-gallery" class="rg-gallery">
@@ -45,39 +75,7 @@
             <div class="es-carousel-wrapper">
               <div class="es-carousel">
                 <ul>
-                  <li><a href="#"><img src="images/1.jpg" data-large="images/1.jpg" alt="image01"/></a></li>
-                  <li><a href="#"><img src="images/2.jpg" data-large="images/2.jpg" alt="image02"/></a></li>
-                  <li><a href="#"><img src="images/3.jpg" data-large="images/3.jpg" alt="image03"/></a></li>
-                  <li><a href="#"><img src="images/4.jpg" data-large="images/4.jpg" alt="image04"/></a></li>
-                  <li><a href="#"><img src="images/5.jpg" data-large="images/5.jpg" alt="image05"/></a></li><li><a href="#"><img src="images/1.jpg" data-large="images/1.jpg" alt="image01"/></a></li>
-                  <li><a href="#"><img src="images/2.jpg" data-large="images/2.jpg" alt="image02"/></a></li>
-                  <li><a href="#"><img src="images/3.jpg" data-large="images/3.jpg" alt="image03"/></a></li>
-                  <li><a href="#"><img src="images/4.jpg" data-large="images/4.jpg" alt="image04"/></a></li>
-                  <li><a href="#"><img src="images/5.jpg" data-large="images/5.jpg" alt="image05"/></a></li><li><a href="#"><img src="images/1.jpg" data-large="images/1.jpg" alt="image01"/></a></li>
-                  <li><a href="#"><img src="images/2.jpg" data-large="images/2.jpg" alt="image02"/></a></li>
-                  <li><a href="#"><img src="images/3.jpg" data-large="images/3.jpg" alt="image03"/></a></li>
-                  <li><a href="#"><img src="images/4.jpg" data-large="images/4.jpg" alt="image04"/></a></li>
-                  <li><a href="#"><img src="images/5.jpg" data-large="images/5.jpg" alt="image05"/></a></li><li><a href="#"><img src="images/1.jpg" data-large="images/1.jpg" alt="image01"/></a></li>
-                  <li><a href="#"><img src="images/2.jpg" data-large="images/2.jpg" alt="image02"/></a></li>
-                  <li><a href="#"><img src="images/3.jpg" data-large="images/3.jpg" alt="image03"/></a></li>
-                  <li><a href="#"><img src="images/4.jpg" data-large="images/4.jpg" alt="image04"/></a></li>
-                  <li><a href="#"><img src="images/5.jpg" data-large="images/5.jpg" alt="image05"/></a></li><li><a href="#"><img src="images/1.jpg" data-large="images/1.jpg" alt="image01"/></a></li>
-                  <li><a href="#"><img src="images/2.jpg" data-large="images/2.jpg" alt="image02"/></a></li>
-                  <li><a href="#"><img src="images/3.jpg" data-large="images/3.jpg" alt="image03"/></a></li>
-                  <li><a href="#"><img src="images/4.jpg" data-large="images/4.jpg" alt="image04"/></a></li>
-                  <li><a href="#"><img src="images/5.jpg" data-large="images/5.jpg" alt="image05"/></a></li><li><a href="#"><img src="images/1.jpg" data-large="images/1.jpg" alt="image01"/></a></li>
-                  <li><a href="#"><img src="images/2.jpg" data-large="images/2.jpg" alt="image02"/></a></li>
-                  <li><a href="#"><img src="images/3.jpg" data-large="images/3.jpg" alt="image03"/></a></li>
-                  <li><a href="#"><img src="images/4.jpg" data-large="images/4.jpg" alt="image04"/></a></li>
-                  <li><a href="#"><img src="images/5.jpg" data-large="images/5.jpg" alt="image05"/></a></li><li><a href="#"><img src="images/1.jpg" data-large="images/1.jpg" alt="image01"/></a></li>
-                  <li><a href="#"><img src="images/2.jpg" data-large="images/2.jpg" alt="image02"/></a></li>
-                  <li><a href="#"><img src="images/3.jpg" data-large="images/3.jpg" alt="image03"/></a></li>
-                  <li><a href="#"><img src="images/4.jpg" data-large="images/4.jpg" alt="image04"/></a></li>
-                  <li><a href="#"><img src="images/5.jpg" data-large="images/5.jpg" alt="image05"/></a></li><li><a href="#"><img src="images/1.jpg" data-large="images/1.jpg" alt="image01"/></a></li>
-                  <li><a href="#"><img src="images/2.jpg" data-large="images/2.jpg" alt="image02"/></a></li>
-                  <li><a href="#"><img src="images/3.jpg" data-large="images/3.jpg" alt="image03"/></a></li>
-                  <li><a href="#"><img src="images/4.jpg" data-large="images/4.jpg" alt="image04"/></a></li>
-                  <li><a href="#"><img src="images/5.jpg" data-large="images/5.jpg" alt="image05"/></a></li>
+                  <!--<li><a href="#"><img src="images/1.jpg" data-large="images/1.jpg" alt="image01"/></a></li>-->
                 </ul>
               </div>
             </div>
@@ -91,6 +89,8 @@
     <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="js/jquery.elastislide.js"></script>
+    <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"></script>
+    <script type="text/javascript" src="js/dropboxWrapper.js"></script>
     <script type="text/javascript" src="js/gallery.js"></script>
   </body>
 </html>

@@ -115,8 +115,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				                </ul>
 		                </li>
 		                <!-- //Dropdown -->
-					    <li><a href="#sponsors" class="scroll">Организаторы</a></li>
+					          <li><a href="#sponsors" class="scroll">Организаторы</a></li>
 		                <li><a href="#contact" class="scroll">Контакты</a></li>
+		                <li><a id="pisos" href="/gallery.html">Галерея</a></li>
 
 		                <!-- Signup-Button -->
 		                <li>
@@ -738,7 +739,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  $(".navbar a.scroll, footer a[href='#myPage']").on('click', function(event) {
 
     // Prevent default anchor click behavior
     event.preventDefault();

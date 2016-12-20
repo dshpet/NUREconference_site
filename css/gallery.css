@@ -49,53 +49,8 @@ h1 span {
   text-shadow: none;
   text-transform: uppercase;
 }
-
-/* Header Style */
-.header {
-  font-size: 13px;
-  background: #000;
-  opacity: 0.9;
-  text-transform: uppercase;
-  -moz-box-shadow: 1px 0px 2px #000;
-  -webkit-box-shadow: 1px 0px 2px #000;
-  box-shadow: 1px 0px 2px #000;
-}
-
-.header a {
-  line-height: 18px;
-  padding: 0 4px;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 1px #000;
-  color: #ddd;
-}
-
-.header a:hover {
-  color: #fff;
-}
-
-.header a span {
-  font-weight: bold;
-}
-
-.header span.right_ab {
-  float: right;
-}
-
 .content {
   margin: 0px 25px 30px 25px;
-}
-
-@media screen and (max-width: 640px) {
-  .header a {
-    display: block;
-    text-align: center;
-    font-size: 10px;
-    text-shadow: none;
-  }
-
-  .header span.right_ab {
-    float: none;
-  }
 }
 
 .rg-image-wrapper {
@@ -209,3 +164,68 @@ h1 span {
   border-radius: 10px;
   opacity: 0.7;
 }
+
+/*-- Navbar-Starts-Here --*/
+
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: transparent;
+  z-index: 99999;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border: none;
+  z-index: 99999;
+  border-radius: 0;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #eee;
+}
+
+.navbar-brand {
+  font-size: 45px;
+  font-family: 'CharisSILR';
+  line-height: 23px;
+  letter-spacing: 1px;
+}
+
+.navbar-inverse {
+  background-color: #009688;
+  border-color: transparent;
+}
+
+.navbar-right {
+  width: 72%;
+}
+
+.navbar-nav > li {
+  float: left;
+  width: 16%;
+  text-align: center;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #eee;
+}
+
+.navbar-nav > li > a {
+  font-family: 'CharisSILR';
+  font-size: 24px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  color: #009688;
+  background-color: #eee;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  color: #333;
+  background-color: #eee;
+}
+
