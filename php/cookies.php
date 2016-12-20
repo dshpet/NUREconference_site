@@ -1,6 +1,6 @@
 <?php
-ini_set('display_errors','On');
-error_reporting(E_ALL);
+  ini_set('display_errors','On');
+  error_reporting(E_ALL);
 
 	class Cookies {
 		private static $name  = "sakmit-admin-cookie";

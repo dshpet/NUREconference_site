@@ -3,32 +3,38 @@ ini_set('display_errors','On');
 error_reporting(E_ALL);
 
 include "cookies.php";
+include "util.php";
 
-function onLoggedIn() {
-  Cookies::give();
-  header("Location: http://".$_SERVER['HTTP_HOST']."/adminPage.html", true, 301);
-  die();
+function tryLogin() {
+	$hashes = array(
+	  1216985755 // 'password' hashed in js
+	);
+
+	if (Util::isRequestMethod('POST'))
+		return in_array($_POST['password'], $hashes);
+	else
+		return Cookies::has();
 }
 
-$hashes = array(
-  1216985755 // 'password' hashed in js
-);
+if (tryLogin()) {
+	Cookies::give();
+	Util::redirectLocal('adminPage.html');
+}
+else
+	Util::redirectLocal('login.html');
 
-if (strtoupper($_SERVER['REQUEST_METHOD']) != 'POST') {
+/*
+if (!Util:isRequestMethod('POST')) {
 	if (Cookies::has())
 		onLoggedIn();
-	else {
-		header("Location: http://".$_SERVER['HTTP_HOST']."/login.html", true, 301);
-		die();
-	}
+	else
+		Util::redirectLocal('login.html');
 }
 else {
 	$hash = $_POST['password'];
 	if (in_array($hash, $hashes))
 		onLoggedIn();
-	else {
-		header("Location: http://".$_SERVER['HTTP_HOST']."/login.html", true, 301);
-		die();
-	}
-}
+	else
+		Util::redirectLocal('login.html');
+}*/
 ?>

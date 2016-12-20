@@ -2,7 +2,9 @@
 ini_set('display_errors','On');
 error_reporting(E_ALL);
 
-if (!isset($_POST))
+include "util.php";
+
+if (!Util::isRequestMethod('POST'))
 	die();
 
 $subject = $_POST["subject"];
@@ -16,4 +18,6 @@ $headers .= "Reply-To: $sender \r\n";
 
 // needs SMTP configured
 mail($to, $subject, $body, $headers);
+
+Util::redirectLocal("thankYou.html");
 ?>
