@@ -37,7 +37,12 @@ DropboxWrapper.prototype.uploadMaterial = function(file, callback) {
 
 DropboxWrapper.prototype.uploadFile = function(path, file, callback) {
   var wrapper = this;
-  this.dbx.filesUpload({path: path + "/" + file.name, contents: file})
+  this.dbx.filesUpload(
+    {
+      path:       transliterate(path + "/" + file.name),
+      contents:   file,
+      autorename: true
+    })
     .then(function(response) {
       console.log(response);
         wrapper.getRichEntry(response, callback);
@@ -79,4 +84,89 @@ DropboxWrapper.prototype.getRichEntry = function(entry, callback) {
     .catch(function(e) {
       console.log(e);
     });
+}
+
+function transliterate(str) {
+  var cyrillicToLatin = [
+      ['а', 'a'],
+      ['б', 'b'],
+      ['в', 'v'],
+      ['г', 'g'],
+      ['д', 'd'],
+      ['е', 'e'],
+      ['ё', 'yo'],
+      ['ж', 'zh'],
+      ['з', 'z'],
+      ['и', 'i'],
+      ['й', 'y'],
+      ['к', 'k'],
+      ['л', 'l'],
+      ['м', 'm'],
+      ['н', 'n'],
+      ['о', 'o'],
+      ['п', 'p'],
+      ['р', 'r'],
+      ['с', 's'],
+      ['т', 't'],
+      ['у', 'u'],
+      ['ф', 'f'],
+      ['х', 'h'],
+      ['ц', 'c'],
+      ['ч', 'ch'],
+      ['ш', 'sh'],
+      ['щ', 'shch'],
+      ['ъ', ''],
+      ['ы', 'y'],
+      ['ь', ''],
+      ['э', 'e'],
+      ['ю', 'yu'],
+      ['я', 'ya'],
+      ['А', 'A'],
+      ['Б', 'B'],
+      ['В', 'V'],
+      ['Г', 'G'],
+      ['Д', 'D'],
+      ['Е', 'E'],
+      ['Ё', 'YO'],
+      ['Ж', 'ZH'],
+      ['З', 'Z'],
+      ['И', 'I'],
+      ['Й', 'Y'],
+      ['К', 'K'],
+      ['Л', 'L'],
+      ['М', 'M'],
+      ['Н', 'N'],
+      ['О', 'O'],
+      ['П', 'P'],
+      ['Р', 'R'],
+      ['С', 'S'],
+      ['Т', 'T'],
+      ['У', 'U'],
+      ['Ф', 'F'],
+      ['Х', 'H'],
+      ['Ц', 'C'],
+      ['Ч', 'CH'],
+      ['Ш', 'SH'],
+      ['Щ', 'SHCH'],
+      ['Ъ', ''],
+      ['Ы', 'Y'],
+      ['Ь', ''],
+      ['Э', 'E'],
+      ['Ю', 'YU'],
+      ['Я', 'YA'],
+      ['і', 'i'],
+      ['ї', 'yi'],
+      ['є', 'ye'],
+      ['І', 'I'],
+      ['Ї', 'YI'],
+      ['Є', 'YE']
+    ];
+
+  for (var i = 0; i < str.length; ++i) {
+    for (var j = 0; j < cyrillicToLatin.length; ++j) {
+      str = str.replace(cyrillicToLatin[j][0], cyrillicToLatin[j][1]);
+    }
+  }
+
+  return str;
 }

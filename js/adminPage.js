@@ -1,7 +1,6 @@
 $.ajax({
   url: '/php/is_admin.php',
   success: function(response) {
-    console.log(response);
     if (!JSON.parse(response).hasAdminAccess)
       window.location.href = "/";
   },
@@ -78,13 +77,13 @@ function initMaterials() {
     
     for (var i = 0; i < files.length; ++i) {
       db.uploadMaterial(files[i], function(file) {
-        addFile(file.name, file.staticLink);
+        addFile(decodeURIComponent(file.name), file.staticLink);
       });
     }
   });
 
   db.forEachMaterialFile(function(file) {
-    addFile(file.name, file.staticLink);    
+    addFile(decodeURIComponent(file.name), file.staticLink);    
   });
 }
 
