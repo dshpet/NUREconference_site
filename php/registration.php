@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 include "util.php";
 
 if (!Util::isRequestMethod('POST'))
-	die();
+  die();
 
 $subject = $_POST["subject"];
 $body    = $_POST["body"];

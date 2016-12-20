@@ -6,35 +6,35 @@ include "cookies.php";
 include "util.php";
 
 function tryLogin() {
-	$hashes = array(
-	  1216985755 // 'password' hashed in js
-	);
+  $hashes = array(
+    1216985755 // 'password' hashed in js
+  );
 
-	if (Util::isRequestMethod('POST'))
-		return in_array($_POST['password'], $hashes);
-	else
-		return Cookies::has();
+  if (Util::isRequestMethod('POST'))
+    return in_array($_POST['password'], $hashes);
+  else
+    return Cookies::has();
 }
 
 if (tryLogin()) {
-	Cookies::give();
-	Util::redirectLocal('adminPage.html');
+  Cookies::give();
+  Util::redirectLocal('adminPage.html');
 }
 else
-	Util::redirectLocal('login.html');
+  Util::redirectLocal('login.html');
 
 /*
 if (!Util:isRequestMethod('POST')) {
-	if (Cookies::has())
-		onLoggedIn();
-	else
-		Util::redirectLocal('login.html');
+  if (Cookies::has())
+    onLoggedIn();
+  else
+    Util::redirectLocal('login.html');
 }
 else {
-	$hash = $_POST['password'];
-	if (in_array($hash, $hashes))
-		onLoggedIn();
-	else
-		Util::redirectLocal('login.html');
+  $hash = $_POST['password'];
+  if (in_array($hash, $hashes))
+    onLoggedIn();
+  else
+    Util::redirectLocal('login.html');
 }*/
 ?>
