@@ -122,26 +122,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		                <li>
 			                <div class="login-pop">
 				                <div id="loginpop">
-					                <a href="#" id="signupButton"><span>Регистрация</span></a>
-					                <div id="signupBox">
-						                <form id="signupForm" action="/php/registration.php" method="POST">
-							                <fieldset id="body">
-								                <fieldset>
-									                <label for="email">Sender</label>
-									                <input type="text" name="sender" id="email">
-								                </fieldset>
-								                <fieldset>
-								                	<label for="email">Subject</label>
-								                	<input type="text" name="subject" id="subject">
-								                </fieldset>
-								                <fieldset>
-								                	<label for="email">Body</label>
-								                	<input type="text" name="body" id="body">
-								                </fieldset>
-							                		<input type="submit" id="login" value="SIGNUP">
-							                </fieldset>
-						                </form>
-					                </div>
+					                <a href="#" id="signupButton" data-toggle="modal" data-target="#registrationModal"><span>Регистрация</span></a>
 				                </div>
 			                </div>
 					        <script src="js/signup_jquery.js"></script>
@@ -268,7 +249,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         	<div class="admissions " id="send">
                 <h3>Подача материалов</h3>
                 <p>Заявки (на всех соавторов в одном файле) и тезисы докладов оформляются по приведенной форме и представляются в виде отдельных файлов по адресу <a class="mail" href="mailto:sakmit@ukr.net">sakmit@ukr.net</a> к указанным срокам.</p>
-				<input type="button" class="more_btn" value="Подать материалы через сайт" data-toggle="modal" data-target="#registrationModal">
 				<div class="clearfix"></div>
             </div>
 
