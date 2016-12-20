@@ -22,19 +22,4 @@ if (tryLogin()) {
 }
 else
   Util::redirectLocal('login.html');
-
-/*
-if (!Util:isRequestMethod('POST')) {
-  if (Cookies::has())
-    onLoggedIn();
-  else
-    Util::redirectLocal('login.html');
-}
-else {
-  $hash = $_POST['password'];
-  if (in_array($hash, $hashes))
-    onLoggedIn();
-  else
-    Util::redirectLocal('login.html');
-}*/
 ?>
