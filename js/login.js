@@ -11,8 +11,8 @@ String.prototype.hashCode = function() {
 };
 
 $(document).ready(function() {
-	$('#login-form').submit(function() {
-		var password = $('#password').val();
-		$('#password').val(password.hashCode());
-	})
+  $('#login-form').submit(function() {
+    var password = $('#password').val();
+    $('#password').val(password.hashCode());
+  })
 });
