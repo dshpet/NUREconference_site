@@ -1,8 +1,12 @@
 $.ajax({
 	url: '/php/is_admin.php',
 	success: function(response) {
+		console.log(response);
 		if (!JSON.parse(response).hasAdminAccess)
 			window.location.href = "/";
+	},
+	error: function() {
+		window.location.href = "/";
 	}
 });
 

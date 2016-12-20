@@ -55,3 +55,7 @@
   text-align: center;
   color: #1e23fb;
 }
+
+.navbar-nav > li > a {
+  font-size: 18px;
+}
