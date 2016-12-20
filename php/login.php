@@ -10,9 +10,9 @@ function onLoggedIn() {
   die();
 }
 
-$hashes = [
+$hashes = array(
   1216985755 // 'password' hashed in js
-];
+);
 
 if (strtoupper($_SERVER['REQUEST_METHOD']) != 'POST') {
 	if (Cookies::has())

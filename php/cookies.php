@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 	class Cookies {
 		private static $name  = "sakmit-admin-cookie";
 		private static $value = "somerandomkey";
-		private static $life  = 60 * 60 * 24; // 1 day
+		private static $life  = 86400; // 1 day
 
 		public static function has() {
 			return isset($_COOKIE[self::$name]) && $_COOKIE[self::$name] == self::$value;
