@@ -269,17 +269,84 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                  <label for="firstName" class="control-label">Имя:</label>
-                                  <input type="text" class="form-control" name="firstName">
+                                  <label for="name" class="control-label">Фамилия, имя, отчество авторов:</label>
+                                  <input type="text" class="form-control" name="name" id="name">
                                 </div>
+								<div class="form-group">
+									<label for="reportName" class="control-label">Название доклада:</label>
+									<input type="text" class="form-control" name="reportName" id="reportName">
+								</div>
+								<div class="checkbox">
+									<label><input type="checkbox" value="" id="studentCheckbox">Вы студент/аспирант?</label>
+								</div>
+								<div class="student-login" style="display: none;">
+									<div class="form-group">
+										<label for="university" class="control-label">ВУЗ:</label>
+										<input type="text" class="form-control" name="university" id="university">
+									</div>
+									<div class="form-group">
+										<label for="faculty" class="control-label">Факультет:</label>
+										<input type="text" class="form-control" name="faculty" id="faculty">
+									</div>
+									<div class="form-group">
+										<label for="cathedral" class="control-label">Кафедра:</label>
+										<input type="text" class="form-control" name="cathedral" id="cathedral">
+									</div>
+									<div class="form-group">
+										<label for="group" class="control-label">Группа:</label>
+										<input type="text" class="form-control" name="group" id="group">
+									</div>
+									<div class="form-group">
+										<label for="lead" class="control-label">Научный руководитель:</label>
+										<input type="text" class="form-control" name="lead" id="lead">
+									</div>
+								</div>
+								<div class="default-login">
+									<div class="form-group">
+										<label for="country" class="control-label">Страна:</label>
+										<input type="text" class="form-control" name="country" id="country">
+									</div>
+									<div class="form-group">
+										<label for="city" class="control-label">Город:</label>
+										<input type="text" class="form-control" name="city" id="city">
+									</div>
+									<div class="form-group">
+										<label for="organisation" class="control-label">Организация:</label>
+										<input type="text" class="form-control" name="organisation" id="organisation">
+									</div>
+									<div class="form-group">
+										<label for="position" class="control-label">Должность:</label>
+										<input type="text" class="form-control" name="position" id="position">
+									</div>
+									<div class="form-group">
+										<label for="degree" class="control-label">Ученая степень:</label>
+										<input type="text" class="form-control" name="degree" id="degree">
+									</div>
+								</div>
                                 <div class="form-group">
-                                  <label for="lastName" class="control-label">Фамилия:</label>
-                                  <input type="text" class="form-control" name="lastName">
+                                  <label for="address" class="control-label">Адрес:</label>
+                                  <input type="text" class="form-control" name="address" id="address">
                                 </div>
-                                <div class="text-right">
-                                  <span class="btn btn-primary btn-info btn-block load-file">Загрузить файлы</span>
-                                  <input type="file" class="hidden">
+								<div class="form-group">
+                                  <label for="email" class="control-label">Email:</label>
+                                  <input type="email" class="form-control" name="email" id="email">
                                 </div>
+								<div class="form-group">
+									<label for="section" class="control-label">Название (номер) секции:</label>
+									<input type="text" class="form-control" name="section" id="section">
+								</div>
+								<div class="form-group">
+									<label class="radio-inline"><input type="radio" name="participation" value="och" checked>Очно</label>
+									<label class="radio-inline"><input type="radio" name="participation" value="zaoch">Заочно</label>
+								</div>
+								<div class="form-group">
+									<label for="additionalTheme" class="control-label">Предлагаемая тема дополнительного обсуждения:</label>
+									<input type="text" class="form-control" name="additionalTheme" id="additionalTheme">
+								</div>
+								<div class="text-right">
+									<span class="btn btn-primary btn-info btn-block load-file">Загрузить файлы</span>
+									<input type="file" class="hidden">
+								</div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>

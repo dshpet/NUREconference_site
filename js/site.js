@@ -92,4 +92,17 @@ $(document).ready( function() {
     $(this).siblings('input[type=file]').trigger('click');
   });
 
+  $(document).on('change', '#studentCheckbox' ,function () {
+    var form = $(this).closest('form'),
+        isChecked = $(this).prop('checked');
+
+    if(isChecked){
+      form.find('.student-login').show();
+      form.find('.default-login').hide();
+    } else {
+      form.find('.student-login').hide();
+      form.find('.default-login').show();
+    }
+  });
+
 });
