@@ -47,20 +47,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script type="text/javascript">
 	$(document).ready(function() {
 		var db = new DropboxWrapper();
-	  db.forEachMaterialFile(function(file) {
-      var div = $('<div class="pdf">');
-      var a   = $('<a href="'      +
-      	           file.staticLink +
-      	           '"><sup>['      +
-      	           file.extension  +
-      	           ']</sup>'       +
-      	           decodeURIComponent(file.name.substr(0, file.name.length - file.extension.length - 1)) +
-      	           '</a>'
-      	         );
+    db.getMaterialsCount(function(count) {
+      if (!count) {
+        $('#materials').append($('<p class="materials-later col-md-offset-2">Программа семинара и другие материалы будут доступны позже.</p>'));
+      } else {
+        db.forEachMaterialFile(function(file) {
+          var div = $('<div class="pdf">');
+          var a   = $('<a href="'      +
+                       file.staticLink +
+                       '"><sup>['      +
+                       file.extension  +
+                       ']</sup>'       +
+                       decodeURIComponent(file.name.substr(0, file.name.length - file.extension.length - 1)) +
+                       '</a>'
+                     );
 
-      div.append(a);
-      $('#materials').append(div);
-	  });
+          div.append(a);
+          $('#materials').append(div);
+        });
+      }
+    });
 	});
 </script>
 
@@ -126,7 +132,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					                <a href="#" id="signupButton" data-toggle="modal" data-target="#registrationModal"><span>Регистрация</span></a>
 				                </div>
 			                </div>
-					        <script src="js/signup_jquery.js"></script>
 		                </li>
 		                <!-- //Signup-Button -->
 

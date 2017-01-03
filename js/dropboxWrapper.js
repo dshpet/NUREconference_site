@@ -27,6 +27,13 @@ DropboxWrapper.prototype.forEachFile = function(path, callback) {
     });
 };
 
+DropboxWrapper.prototype.getMaterialsCount = function(callback) {
+  this.dbx.filesListFolder({path: '/Materials/'})
+    .then(function(response) {
+      callback(response.entries.length);
+    });
+}
+
 DropboxWrapper.prototype.uploadImage = function(file, callback) {
   this.uploadFile('/Images', file, callback);
 }
