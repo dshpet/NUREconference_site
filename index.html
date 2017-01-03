@@ -259,6 +259,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="clearfix"></div>
             </div>
 
+            <!-- Invisible submission form -->
             <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <form action="/php/registration.php" method="POST">
                     <div class="modal-dialog" role="document" style="margin-top: 100px">
@@ -277,7 +278,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<input type="text" class="form-control" name="reportName" id="reportName">
 								</div>
 								<div class="checkbox">
-									<label><input type="checkbox" value="" id="studentCheckbox">Вы студент/аспирант?</label>
+									<div class="form-group">
+										<label><input type="checkbox" value="" id="studentCheckbox">Вы студент/аспирант?</label>
+									</div>
 								</div>
 								<div class="student-login" style="display: none;">
 									<div class="form-group">
