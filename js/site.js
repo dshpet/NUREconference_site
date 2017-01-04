@@ -98,10 +98,14 @@ $(document).ready( function() {
 
     if(isChecked){
       form.find('.student-login').show();
+      form.find('.student-login').find('input').attr('required', 'required');
+      form.find('.default-login').find('input').removeAttr('required');
       form.find('.default-login').hide();
     } else {
-      form.find('.student-login').hide();
       form.find('.default-login').show();
+      form.find('.default-login').find('input').attr('required', 'required');
+      form.find('.student-login').find('input').removeAttr('required');
+      form.find('.student-login').hide();
     }
   });
 
